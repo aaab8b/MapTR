@@ -66,17 +66,21 @@ def custom_train_detector(model,
             nonshuffler_sampler=cfg.data.nonshuffler_sampler,  # dict(type='DistributedSampler'),
         ) for ds in dataset
     ]
-
+    print("data load finished")
     # put model on gpus
     if distributed:
         find_unused_parameters = cfg.get('find_unused_parameters', False)
         # Sets the `find_unused_parameters` parameter in
         # torch.nn.parallel.DistributedDataParallel
+        print("enter")
+        model=model.cuda()
+        print("cuda finish")
         model = MMDistributedDataParallel(
-            model.cuda(),
+            model,
             device_ids=[torch.cuda.current_device()],
             broadcast_buffers=False,
             find_unused_parameters=find_unused_parameters)
+        print("model mmdistributed finished")
         if eval_model is not None:
             eval_model = MMDistributedDataParallel(
                 eval_model.cuda(),
@@ -90,7 +94,7 @@ def custom_train_detector(model,
             eval_model = MMDataParallel(
                 eval_model.cuda(cfg.gpu_ids[0]), device_ids=cfg.gpu_ids)
 
-
+    print("model load finished")
     # build runner
     optimizer = build_optimizer(model, cfg.optimizer)
 
@@ -196,5 +200,6 @@ def custom_train_detector(model,
         runner.resume(cfg.resume_from)
     elif cfg.load_from:
         runner.load_checkpoint(cfg.load_from)
+    print("enter running")
     runner.run(data_loaders, cfg.workflow)
 

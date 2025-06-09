@@ -5,8 +5,10 @@ import torch.nn as nn
 from mmcv.cnn.bricks.registry import (ATTENTION,
                                       TRANSFORMER_LAYER,
                                       TRANSFORMER_LAYER_SEQUENCE)
-from mmdet3d.ops import bev_pool
-from mmdet3d.ops.bev_pool_v2.bev_pool import bev_pool_v2
+# from mmdet3d.ops import bev_pool
+# from mmdet3d.ops.bev_pool_v2.bev_pool import bev_pool_v2
+from projects.mmdet3d_plugin.maptr.modules.ops.bev_pool import bev_pool 
+from projects.mmdet3d_plugin.maptr.modules.ops.bev_pool_v2 import bev_pool_v2
 from mmcv.runner import force_fp32, auto_fp16
 from torch.cuda.amp.autocast_mode import autocast
 from mmcv.cnn import build_conv_layer
@@ -110,12 +112,16 @@ class BaseTransform(BaseModule):
         
         # undo post-transformation
         # B x N x D x H x W x 3
-        points = self.frustum - post_trans.view(B, N, 1, 1, 1, 3)
-        points = (
-            torch.inverse(post_rots)
-            .view(B, N, 1, 1, 1, 3, 3)
-            .matmul(points.unsqueeze(-1))
-        )
+        points = (self.frustum - post_trans.view(B, N, 1, 1, 1, 3)).unsqueeze(-1)
+        B,N,D,H,W = points.shape[:5]
+        post_rots_inverse=torch.inverse(post_rots).view(B, N, 1, 1, 1, 3, 3).reshape(-1,3,3)
+        points=post_rots_inverse.matmul(points.view(B*N,D*H*W,3).permute(0,2,1))
+        points=points.permute(0,2,1).view(B,N,D,H,W,3,1)
+        # points = (
+        #     torch.inverse(post_rots)
+        #     .view(B, N, 1, 1, 1, 3, 3)
+        #     .matmul(points.unsqueeze(-1))
+        # )
         # cam_to_ego
         points = torch.cat(
             (
@@ -124,17 +130,24 @@ class BaseTransform(BaseModule):
             ),
             5,
         )
-        combine = rots.matmul(torch.inverse(intrins))
-        points = combine.view(B, N, 1, 1, 1, 3, 3).matmul(points).squeeze(-1)
+        combine = rots.matmul(torch.inverse(intrins)).reshape(-1,3,3)
+
+        # points = combine.view(B, N, 1, 1, 1, 3, 3).matmul(points).squeeze(-1)
+        points=combine.matmul(points.view(B*N,D*H*W,3).permute(0,2,1)).permute(0,2,1).view(B,N,D,H,W,3)
         points += trans.view(B, N, 1, 1, 1, 3)
         # ego_to_lidar
         points -= lidar2ego_trans.view(B, 1, 1, 1, 1, 3)
-        points = (
-            torch.inverse(lidar2ego_rots)
-            .view(B, 1, 1, 1, 1, 3, 3)
-            .matmul(points.unsqueeze(-1))
-            .squeeze(-1)
-        )
+
+        # B,N,D,H,W = points.shape[:5]
+        lidar2ego_rots_inverse=torch.inverse(lidar2ego_rots).view(B, 1, 1, 1, 1, 3, 3).repeat_interleave(N,1).reshape(-1,3,3)
+        points=lidar2ego_rots_inverse.matmul(points.view(B*N,D*H*W,3).permute(0,2,1))
+        points=points.permute(0,2,1).view(B,N,D,H,W,3).contiguous()
+        # points = (
+        #     torch.inverse(lidar2ego_rots)
+        #     .view(B, 1, 1, 1, 1, 3, 3)
+        #     .matmul(points.unsqueeze(-1))
+        #     .squeeze(-1)
+        # )
 
         if "extra_rots" in kwargs:
             extra_rots = kwargs["extra_rots"]

@@ -24,6 +24,8 @@ from mmseg import __version__ as mmseg_version
 
 from mmcv.utils import TORCH_VERSION, digit_version
 
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')
     parser.add_argument('config', help='train config file path')
@@ -215,18 +217,23 @@ def main():
         test_cfg=cfg.get('test_cfg'))
     model.init_weights()
 
-    eval_model_config = copy.deepcopy(cfg.model)
-    eval_model = build_model(
-        eval_model_config,
-        train_cfg=cfg.get('train_cfg'),
-        test_cfg=cfg.get('test_cfg'))
+    # model=torch.compile(model,mode="reduce-overhead")
+    # model = model.to(memory_format=torch.channels_last)
+    # model.img_backbone=model.img_backbone.to(memory_format=torch.channels_last)
+    # model.img_neck=model.img_neck.to(memory_format=torch.channels_last)
+    # import pdb
+    # pdb.set_trace()
+    # eval_model_config = copy.deepcopy(cfg.model)
+    # eval_model = build_model(
+    #     eval_model_config,
+    #     train_cfg=cfg.get('train_cfg'),
+    #     test_cfg=cfg.get('test_cfg'))
     
-    fp16_cfg = cfg.get('fp16', None)
-    if fp16_cfg is not None:
-        wrap_fp16_model(eval_model)
-
-    #eval_model.init_weights()
-    eval_model.load_state_dict(model.state_dict())
+    # fp16_cfg = cfg.get('fp16', None)
+    # if fp16_cfg is not None:
+    #     wrap_fp16_model(eval_model)
+    # #eval_model.init_weights()
+    # eval_model.load_state_dict(model.state_dict())
 
     logger.info(f'Model:\n{model}')
     from projects.mmdet3d_plugin.datasets import custom_build_dataset
@@ -256,11 +263,12 @@ def main():
             if hasattr(datasets[0], 'PALETTE') else None)
     # add an attribute for visualization convenience
     model.CLASSES = datasets[0].CLASSES
+    logger.info(f'Dataset built.')
     custom_train_model(
         model,
         datasets,
         cfg,
-        eval_model=eval_model,
+        # eval_model=eval_model,
         distributed=distributed,
         validate=(not args.no_validate),
         timestamp=timestamp,
@@ -268,4 +276,5 @@ def main():
 
 
 if __name__ == '__main__':
+    torch.multiprocessing.set_start_method('fork')
     main()

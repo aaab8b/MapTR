@@ -1,0 +1,731 @@
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda.h -> /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda.h [skipped, no changes]
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h -> /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h [skipped, no changes]
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/version.cpp -> /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/version.cpp [skipped, no changes]
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda_kernel.cuh -> /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip_kernel.cuh [skipped, already hipified]
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda.cu -> /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip [skipped, already hipified]
+[92mSuccessfully preprocessed all matching files.[0m
+Total number of unsupported CUDA function calls: 0
+
+
+Total number of replaced kernel launches: 6
+running build
+running build_py
+copying function/__init__.py -> build/lib.linux-x86_64-cpython-310/function
+copying function/geometric_kernel_attn_func.py -> build/lib.linux-x86_64-cpython-310/function
+running build_ext
+building 'GeometricKernelAttention' extension
+creating /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/src
+Emitting ninja build file /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/build.ninja...
+Compiling objects...
+Using envvar MAX_JOBS (32) as the number of workers...
+[1/2] /opt/rocm/bin/hipcc  -DWITH_CUDA -I/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/TH -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THC -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THH -I/opt/rocm/include -I/opt/conda/envs/py_3.10/include/python3.10 -c -c /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip -o /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/src/geometric_kernel_attn_hip.o -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=GeometricKernelAttention -D_GLIBCXX_USE_CXX11_ABI=1 --offload-arch=gfx942 -fno-gpu-rdc -std=c++17
+FAILED: /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/src/geometric_kernel_attn_hip.o 
+/opt/rocm/bin/hipcc  -DWITH_CUDA -I/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/TH -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THC -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THH -I/opt/rocm/include -I/opt/conda/envs/py_3.10/include/python3.10 -c -c /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip -o /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/src/geometric_kernel_attn_hip.o -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=GeometricKernelAttention -D_GLIBCXX_USE_CXX11_ABI=1 --offload-arch=gfx942 -fno-gpu-rdc -std=c++17
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:27:22: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   27 |     AT_ASSERTM(value.type().is_cuda(), "value must be a CUDA tensor");
+      |                      ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:28:31: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   28 |     AT_ASSERTM(spatial_shapes.type().is_cuda(), "spatial_shapes must be a CUDA tensor");
+      |                               ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:29:34: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   29 |     AT_ASSERTM(level_start_index.type().is_cuda(), "level_start_index must be a CUDA tensor");
+      |                                  ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:30:29: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   30 |     AT_ASSERTM(sampling_loc.type().is_cuda(), "sampling_loc must be a CUDA tensor");
+      |                             ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:31:28: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   31 |     AT_ASSERTM(attn_weight.type().is_cuda(), "attn_weight must be a CUDA tensor");
+      |                            ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:57:42: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   57 |         AT_DISPATCH_FLOATING_TYPES(value.type(), "multiscale_kernel_attn_forward_cuda", ([&] {
+      |                                          ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:57:9: error: no viable conversion from 'const DeprecatedTypeProperties' to 'at::ScalarType'
+   57 |         AT_DISPATCH_FLOATING_TYPES(value.type(), "multiscale_kernel_attn_forward_cuda", ([&] {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   58 |           multiscale_kernel_attn_forward_cuda(at::hip::getCurrentHIPStreamMasqueradingAsCUDA(),
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   59 |                 value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   60 |                 spatial_shapes.data<int64_t>(),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   61 |                 level_start_index.data<int64_t>(),
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   62 |                 sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 |                 attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   64 |                 batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   65 |                 columns.data<scalar_t>());
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+   66 | 
+   67 |         }));
+      |         ~~~
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Dispatch.h:219:3: note: expanded from macro 'AT_DISPATCH_FLOATING_TYPES'
+  219 |   AT_DISPATCH_SWITCH(TYPE, NAME, AT_DISPATCH_CASE_FLOATING_TYPES(__VA_ARGS__))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Dispatch.h:199:48: note: expanded from macro 'AT_DISPATCH_SWITCH'
+  199 |     at::ScalarType _st = ::detail::scalar_type(the_type);                   \
+      |                                                ^~~~~~~~
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/DeprecatedTypeProperties.h:120:3: note: candidate function
+  120 |   operator TensorOptions() const {
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Dispatch.h:101:50: note: passing argument to parameter 's' here
+  101 | inline at::ScalarType scalar_type(at::ScalarType s) {
+      |                                                  ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:59:23: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   59 |                 value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:59:23: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   59 |                 value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:60:32: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   60 |                 spatial_shapes.data<int64_t>(),
+      |                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:60:32: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   60 |                 spatial_shapes.data<int64_t>(),
+      |                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:61:35: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   61 |                 level_start_index.data<int64_t>(),
+      |                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:61:35: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   61 |                 level_start_index.data<int64_t>(),
+      |                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:62:30: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   62 |                 sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                              ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:62:30: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   62 |                 sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                              ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:63:29: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   63 |                 attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                             ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:63:29: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   63 |                 attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                             ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:65:25: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   65 |                 columns.data<scalar_t>());
+      |                         ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:65:25: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   65 |                 columns.data<scalar_t>());
+      |                         ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:59:23: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   59 |                 value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:59:23: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   59 |                 value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:60:32: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   60 |                 spatial_shapes.data<int64_t>(),
+      |                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:60:32: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   60 |                 spatial_shapes.data<int64_t>(),
+      |                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:61:35: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   61 |                 level_start_index.data<int64_t>(),
+      |                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:61:35: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   61 |                 level_start_index.data<int64_t>(),
+      |                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:62:30: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   62 |                 sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                              ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:62:30: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   62 |                 sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                              ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:63:29: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   63 |                 attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                             ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:63:29: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   63 |                 attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                             ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:65:25: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   65 |                 columns.data<scalar_t>());
+      |                         ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:65:25: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+   65 |                 columns.data<scalar_t>());
+      |                         ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:92:22: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   92 |     AT_ASSERTM(value.type().is_cuda(), "value must be a CUDA tensor");
+      |                      ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:93:31: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   93 |     AT_ASSERTM(spatial_shapes.type().is_cuda(), "spatial_shapes must be a CUDA tensor");
+      |                               ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:94:34: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   94 |     AT_ASSERTM(level_start_index.type().is_cuda(), "level_start_index must be a CUDA tensor");
+      |                                  ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:95:29: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   95 |     AT_ASSERTM(sampling_loc.type().is_cuda(), "sampling_loc must be a CUDA tensor");
+      |                             ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:96:28: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   96 |     AT_ASSERTM(attn_weight.type().is_cuda(), "attn_weight must be a CUDA tensor");
+      |                            ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:97:28: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   97 |     AT_ASSERTM(grad_output.type().is_cuda(), "grad_output must be a CUDA tensor");
+      |                            ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:126:42: warning: 'type' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+  126 |         AT_DISPATCH_FLOATING_TYPES(value.type(), "multiscale_kernel_attn_backward_cuda", ([&] {
+      |                                          ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:224:3: note: 'type' has been explicitly marked deprecated here
+  224 |   C10_DEPRECATED_MESSAGE("Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device().")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:126:9: error: no viable conversion from 'const DeprecatedTypeProperties' to 'at::ScalarType'
+  126 |         AT_DISPATCH_FLOATING_TYPES(value.type(), "multiscale_kernel_attn_backward_cuda", ([&] {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  127 |           multiscale_kernel_attn_backward_cuda(at::hip::getCurrentHIPStreamMasqueradingAsCUDA(),
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  128 |                                     grad_output_g.data<scalar_t>(),
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  129 |                                     value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  130 |                                     spatial_shapes.data<int64_t>(),
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  131 |                                     level_start_index.data<int64_t>(),
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  132 |                                     sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  133 |                                     attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  134 |                                     batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point,
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  135 |                                     grad_value.data<scalar_t>() +  n * im2col_step_ * per_value_size,
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  136 |                                     grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  137 | 
+  138 |         }));
+      |         ~~~
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Dispatch.h:219:3: note: expanded from macro 'AT_DISPATCH_FLOATING_TYPES'
+  219 |   AT_DISPATCH_SWITCH(TYPE, NAME, AT_DISPATCH_CASE_FLOATING_TYPES(__VA_ARGS__))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Dispatch.h:199:48: note: expanded from macro 'AT_DISPATCH_SWITCH'
+  199 |     at::ScalarType _st = ::detail::scalar_type(the_type);                   \
+      |                                                ^~~~~~~~
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/DeprecatedTypeProperties.h:120:3: note: candidate function
+  120 |   operator TensorOptions() const {
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Dispatch.h:101:50: note: passing argument to parameter 's' here
+  101 | inline at::ScalarType scalar_type(at::ScalarType s) {
+      |                                                  ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:128:51: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  128 |                                     grad_output_g.data<scalar_t>(),
+      |                                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:128:51: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  128 |                                     grad_output_g.data<scalar_t>(),
+      |                                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:129:43: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  129 |                                     value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                                           ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:129:43: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  129 |                                     value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                                           ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:130:52: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  130 |                                     spatial_shapes.data<int64_t>(),
+      |                                                    ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:130:52: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  130 |                                     spatial_shapes.data<int64_t>(),
+      |                                                    ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:131:55: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  131 |                                     level_start_index.data<int64_t>(),
+      |                                                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:131:55: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  131 |                                     level_start_index.data<int64_t>(),
+      |                                                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:132:50: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  132 |                                     sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                                                  ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:132:50: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  132 |                                     sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                                                  ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:133:49: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  133 |                                     attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                                                 ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:133:49: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  133 |                                     attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                                                 ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:135:48: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  135 |                                     grad_value.data<scalar_t>() +  n * im2col_step_ * per_value_size,
+      |                                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:135:48: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  135 |                                     grad_value.data<scalar_t>() +  n * im2col_step_ * per_value_size,
+      |                                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:136:54: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  136 |                                     grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size);
+      |                                                      ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:136:54: warning: 'data<double>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  136 |                                     grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size);
+      |                                                      ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<double>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:128:51: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  128 |                                     grad_output_g.data<scalar_t>(),
+      |                                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:128:51: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  128 |                                     grad_output_g.data<scalar_t>(),
+      |                                                   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:129:43: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  129 |                                     value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                                           ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:129:43: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  129 |                                     value.data<scalar_t>() + n * im2col_step_ * per_value_size,
+      |                                           ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:130:52: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  130 |                                     spatial_shapes.data<int64_t>(),
+      |                                                    ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:130:52: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  130 |                                     spatial_shapes.data<int64_t>(),
+      |                                                    ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:131:55: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  131 |                                     level_start_index.data<int64_t>(),
+      |                                                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:131:55: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  131 |                                     level_start_index.data<int64_t>(),
+      |                                                       ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:132:50: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  132 |                                     sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                                                  ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:132:50: warning: 'data<long>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  132 |                                     sampling_loc.data<int64_t>() + n * im2col_step_ * per_sample_loc_size,
+      |                                                  ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<long>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:133:49: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  133 |                                     attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                                                 ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:133:49: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  133 |                                     attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size,
+      |                                                 ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:135:48: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  135 |                                     grad_value.data<scalar_t>() +  n * im2col_step_ * per_value_size,
+      |                                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:135:48: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  135 |                                     grad_value.data<scalar_t>() +  n * im2col_step_ * per_value_size,
+      |                                                ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:136:54: warning: 'data' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  136 |                                     grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size);
+      |                                                      ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:247:7: note: 'data' has been explicitly marked deprecated here
+  247 |   T * data() const {
+      |       ^
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip:136:54: warning: 'data<float>' is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+  136 |                                     grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size);
+      |                                                      ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:246:3: note: 'data<float>' has been explicitly marked deprecated here
+  246 |   C10_DEPRECATED_MESSAGE("Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead.")
+      |   ^
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/c10/util/Deprecated.h:24:43: note: expanded from macro 'C10_DEPRECATED_MESSAGE'
+   24 | #define C10_DEPRECATED_MESSAGE(message) [[deprecated(message)]]
+      |                                           ^
+69 warnings and 2 errors generated when compiling for gfx942.
+failed to execute:/opt/rocm/lib/llvm/bin/clang++  --offload-arch=gfx942 -O3  -DWITH_CUDA -I/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/TH -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THC -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THH -I/opt/rocm/include -I/opt/conda/envs/py_3.10/include/python3.10 -c -c -x hip /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_hip.hip -o "/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/src/geometric_kernel_attn_hip.o" -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1016\" -DTORCH_EXTENSION_NAME=GeometricKernelAttention -D_GLIBCXX_USE_CXX11_ABI=1 -fno-gpu-rdc -std=c++17
+[2/2] c++ -MMD -MF /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/src/version.o.d -pthread -B /opt/conda/envs/py_3.10/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/envs/py_3.10/include -fPIC -O2 -isystem /opt/conda/envs/py_3.10/include -fPIC -DWITH_CUDA -I/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/TH -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THC -I/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/THH -I/opt/rocm/include -I/opt/conda/envs/py_3.10/include/python3.10 -c -c /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/version.cpp -o /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/build/temp.linux-x86_64-cpython-310/src/version.o -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=GeometricKernelAttention -D_GLIBCXX_USE_CXX11_ABI=1 -std=c++17
+In file included from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/version.cpp:1:
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h: In function ‘at::Tensor geometric_kernel_attn_forward(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, int)’:
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h:17:17: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   17 |   if (value.type().is_cuda())
+      |       ~~~~~~~~~~^~
+In file included from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                 from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda.h:3,
+                 from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h:6,
+                 from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/version.cpp:1:
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:225:30: note: declared here
+  225 |   DeprecatedTypeProperties & type() const {
+      |                              ^~~~
+In file included from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/version.cpp:1:
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h: In function ‘std::vector<at::Tensor> geometric_kernel_attn_backward(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, int)’:
+/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h:36:17: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+   36 |   if (value.type().is_cuda())
+      |       ~~~~~~~~~~^~
+In file included from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                 from /opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                 from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn_cuda.h:3,
+                 from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/geometric_kernel_attn.h:6,
+                 from /mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/src/version.cpp:1:
+/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:225:30: note: declared here
+  225 |   DeprecatedTypeProperties & type() const {
+      |                              ^~~~
+ninja: build stopped: subcommand failed.
+Traceback (most recent call last):
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2219, in _run_ninja_build
+    subprocess.run(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v', '-j', '32']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/raid0/zrz/MapTR/projects/mmdet3d_plugin/maptr/modules/ops/geometric_kernel_attn/setup.py", line 56, in <module>
+    setup(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+    return distutils.core.setup(**attrs)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 183, in setup
+    return run_commands(dist)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 199, in run_commands
+    dist.run_commands()
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 954, in run_commands
+    self.run_command(cmd)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/dist.py", line 950, in run_command
+    super().run_command(command)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 973, in run_command
+    cmd_obj.run()
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/command/build.py", line 135, in run
+    self.run_command(cmd_name)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+    self.distribution.run_command(command)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/dist.py", line 950, in run_command
+    super().run_command(command)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 973, in run_command
+    cmd_obj.run()
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 98, in run
+    _build_ext.run(self)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 359, in run
+    self.build_extensions()
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 909, in build_extensions
+    build_ext.build_extensions(self)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 476, in build_extensions
+    self._build_extensions_serial()
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 502, in _build_extensions_serial
+    self.build_extension(ext)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 263, in build_extension
+    _build_ext.build_extension(self, ext)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/Cython/Distutils/build_ext.py", line 135, in build_extension
+    super(build_ext, self).build_extension(ext)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 557, in build_extension
+    objects = self.compiler.compile(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 722, in unix_wrap_ninja_compile
+    _write_ninja_file_and_compile_objects(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1879, in _write_ninja_file_and_compile_objects
+    _run_ninja_build(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2235, in _run_ninja_build
+    raise RuntimeError(message) from e
+RuntimeError: Error compiling objects for extension

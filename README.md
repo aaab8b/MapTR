@@ -1,5 +1,13 @@
 <div align="center">
 <h1>MapTR <img src="assets/map.png" width="30"></h1>
+
+###Rocm verison of MapTRv2:
+0. Using a Rocm Docker that we provided.
+1. Prepare all the data like original MapTRv2.
+2. link or copy mmdetection3d to the root directory of MapTRv2.
+3. To use original fp16 training, sh run_train_fp16.sh.
+4. To use bf16 training we modified, sh run_train_bf16.sh.
+
 <h3>An End-to-End Framework for Online Vectorized HD Map Construction</h3>
 
 [Bencheng Liao](https://github.com/LegendBC)<sup>1,2,3</sup> \*, [Shaoyu Chen](https://scholar.google.com/citations?user=PIeNN2gAAAAJ&hl=en&oi=sra)<sup>1,3</sup> \*, Yunchi Zhang<sup>1,3</sup> \*, [Bo Jiang](https://github.com/rb93dett)<sup>1,3</sup> \*,[Tianheng Cheng](https://scholar.google.com/citations?user=PH8rJHYAAAAJ&hl=zh-CN)<sup>1,3</sup>, [Qian Zhang](https://scholar.google.com/citations?user=pCY-bikAAAAJ&hl=zh-CN)<sup>3</sup>, [Wenyu Liu](http://eic.hust.edu.cn/professor/liuwenyu/)<sup>1</sup>, [Chang Huang](https://scholar.google.com/citations?user=IyyEKyIAAAAJ&hl=zh-CN)<sup>3</sup>, [Xinggang Wang](https://xinggangw.info/)<sup>1 :email:</sup>
