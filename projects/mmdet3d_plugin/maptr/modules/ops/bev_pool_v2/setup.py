@@ -3,7 +3,7 @@ import glob
 
 import torch
 
-from torch.utils.cpp_extension import CUDA_HOME
+from torch.utils.cpp_extension import HIP_HOME
 from torch.utils.cpp_extension import CppExtension
 from torch.utils.cpp_extension import CUDAExtension
 
@@ -26,7 +26,7 @@ def get_extensions():
     extra_compile_args = {"cxx": []}
     define_macros = []
 
-    if torch.cuda.is_available() and CUDA_HOME is not None:
+    if torch.cuda.is_available() and HIP_HOME is not None:
         extension = CUDAExtension
         sources += source_cuda
         define_macros += [("WITH_CUDA", None)]
