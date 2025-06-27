@@ -5,9 +5,10 @@
 0. Using a Rocm Docker that we provided.
 1. Prepare all the data like original MapTRv2.
 2. link or copy mmdetection3d to the root directory of MapTRv2.
-3. cd projects/mmdet3d_plugin/maptr/modules/ops/ and install bev_pool, bev_pool_v2, and geometric_kernel_attention by python3 setup.py install.
-4. To use original fp16 training, sh run_train_fp16.sh.
-5. To use bf16 training we modified, sh run_train_bf16.sh.
+3. pip3 install av2==0.1.0
+4. cd projects/mmdet3d_plugin/maptr/modules/ops/ and install bev_pool, bev_pool_v2, and geometric_kernel_attention by python3 setup.py install.
+5. To use original fp16 training, sh run_train_fp16.sh.
+6. To use bf16 training we modified, sh run_train_bf16.sh.
 
 <h3>An End-to-End Framework for Online Vectorized HD Map Construction</h3>
 
